@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,800;1,300;1,400;1,600;1,800&display=swap');
+:root{
+    --primary-clr: ;
+}
+body{
+    font-family: "Poppins", sans-serif;
+}
+img{
+    width: 100%;
+}
+h2, h3{
+    /* warna untuk konten heading */
+
+}
+nav a{
+    font-size: 18px;
+    text-decoration: none;
+}
+nav li a:hover{
+    font-weight: 600;
+}
+.jumbotron{
+    font-size: 20px;
+    padding: 60px;
+
+}
+.profile header{
+    text-align: center;
+}
+footer{
+    padding: 20px;
+    color: #fff;
+    background-color: #000;
+    text-align: center;
+    font-weight: 600;
+}
