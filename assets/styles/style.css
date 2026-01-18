@@ -1,36 +1,148 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,800;1,300;1,400;1,600;1,800&display=swap');
 :root{
-    --primary-clr: ;
+    --primary-clr: #FACE68;
+    --nav-clr: #FAAC68;
+    --black-clr: #1D1C1A;
+
+    --main-bg-clr: #FFFAFA;
+    --card: #FAFAFA;
+    
+    --shadow-md: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1); /* box-shadow */
+}
+*{
+    box-sizing: border-box;
 }
 body{
     font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--main-bg-clr);
+    color: var(--black-clr);
 }
 img{
     width: 100%;
+    border-radius: 6px;
+}
+a{
+    text-decoration: none;
+    color: inherit;
 }
 h2, h3{
     /* warna untuk konten heading */
-
+    text-transform: uppercase;
+    color: var(--nav-clr);
+    
 }
+header{
+    display: inline;
+}
+header h1{
+    text-transform: uppercase;
+    letter-spacing: 2pt;
+}
+nav{
+    background-color: var(--nav-clr);
+    padding: 12px;
+    position: sticky;
+    top: 0;
+}
+nav ul{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    max-width: 400px;
+    /* padding-inline: 4rem; */
+}
+nav li{
+    list-style: none;
+    margin: 0 auto;
+    flex: 1 auto;
+    /* margin-right: 20px; */
+}
+nav li:nth-child(1){
+    /* border: solid 1px red; */
+    /* flex: 4; */
+} 
 nav a{
+    margin: 0 4px;
     font-size: 18px;
-    text-decoration: none;
 }
-nav li a:hover{
+nav a:hover{
     font-weight: 600;
 }
+article p{
+    line-height: 1.5;
+}
 .jumbotron{
-    font-size: 20px;
+    background-color: var(--primary-clr);
     padding: 60px;
+    font-size: 20px;
+    text-align: center;
 
 }
-.profile header{
+.card{
+    border: solid 1px #ddd;
+    border-radius: 12px;
+    padding: 12px;
+    margin: 12px;
+    background-color: var(--card);
+    box-shadow: var(--shadow-md);
+}
+aside article{
     text-align: center;
 }
+aside table{
+    margin: 0 auto;
+}
+aside figure img{
+    max-width: 300px;
+}
+figcaption{
+    color: rgb(108, 108, 108);
+    font-style: italic;
+}
 footer{
+    margin-top: 2rem;
     padding: 20px;
     color: #fff;
     background-color: #000;
     text-align: center;
     font-weight: 600;
+}
+footer a{
+    padding: 0 4px;
+    transition: 0.2s;
+}
+footer a:hover{
+    background-color: var(--card);
+    color: var(--black-clr);
+}
+
+@media screen and (min-width: 600px) {
+    h2{
+        margin-top: 8px;
+    }
+    nav li{
+        flex: unset;
+    }
+    .card{
+        padding: 1.25rem;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    main{
+        display: flex;
+        align-items: flex-start;
+        max-width: 1300px;
+        margin: 0 auto;
+    }
+    main .content{
+        flex: 5;
+        display: flex;
+        flex-flow: column nowrap;
+    }
+    aside{
+        flex: 1 1 120px; 
+    }
 }
